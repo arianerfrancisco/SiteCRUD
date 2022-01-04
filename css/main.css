@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&family=Nunito:wght@700&family=Yellowtail&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +5,7 @@
 }
 
 :root{
-    --primary-color: #F4D9D0;
+    --primary-color: #FFBA00;
     --secundary-color: #FFF1CC;
     --shadow-color: #CCC;
     --text-color: #FFF;
@@ -16,7 +15,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: "Poppins", sans-serif;
+    font-family: 'karla', sans-serif;
     position:relative;
 }
 
