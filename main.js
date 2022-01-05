@@ -23,6 +23,9 @@ const updateClient = (index, client) => {
     setLocalStorage(dbClient)
 }
 
+// CRUD UPDATE
+
+
 // CRUD - READ
 const readClient = () => getLocalStorage()
 
@@ -32,7 +35,6 @@ const CreateClient = (client) => {
     dbClient.push(client)
     setLocalStorage(dbClient)
 }
-
 
 // eventos
 
