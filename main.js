@@ -14,17 +14,22 @@ const tempCliente = {
 }
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
-const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(db_client))
+const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
 
 // CRUD - UPDATE
 const updateClient = (index, client) => {
     const dbClient = readClient()
     dbClient[index] = client
     setLocalStorage(dbClient)
+   
 }
 
-// CRUD UPDATE
-
+// CRUD DELETE
+const deleteClient = (index) => {
+    const dbClient = readClient()
+    dbClient.splice(index, 1)
+    setLocalStorage(dbClient)
+}
 
 // CRUD - READ
 const readClient = () => getLocalStorage()
@@ -36,11 +41,14 @@ const CreateClient = (client) => {
     setLocalStorage(dbClient)
 }
 
-// eventos
+// EVENTOS
 
 document.getElementById('cadastrarCliente')
     .addEventListener('click', openModal)
 
 document.getElementById('modalClose')
     .addEventListener('click', closeModal)
+
+document.getElementById('salvar')
+    .addEventListener('click', salveClient)
 
